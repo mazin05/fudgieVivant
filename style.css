@@ -1,0 +1,150 @@
+html{
+    scroll-behavior: smooth;
+}
+
+.container-fluid{
+    margin-top: 10px;
+}
+
+.navbar-brand{
+    font-size: 30px;
+    color: chocolate;
+    margin-left: 15px;
+}
+
+nav>div{
+    background-color: white;
+}
+
+.nav-item>a:hover{
+    border-radius: 8%;
+    text-decoration: underline;
+    color: rgb(204, 121, 62);
+    font-weight: 600;
+    text-decoration-color:rgb(204, 121, 62);
+    /* background-color: rgb(204, 121, 62); */
+}
+
+.collapse>.navbar-nav>.nav-item>a{
+   font-size: 20px;
+   margin-left: 50px;
+}
+/* ----------------------------------------------------------------------- */
+
+.carousel-item>img{
+    padding: 2%;
+    width: 100%;
+    height: 500px;
+}
+
+
+.marq {
+    padding-top: 25px;
+    font-size: 25px;
+    font-weight: 600;
+    color:rgb(204, 121, 62);
+    padding-bottom: 5%;
+}
+/* ----------------------------------------------------------------------- */
+
+.text-center{
+    margin-top: 1%;
+}
+.text-center>div>.col>img{
+    width: 70%;
+    height: 2%;
+}
+#rapture{
+    padding-bottom: 50px;
+    font-weight: 500;
+    font-size: 50px;
+}
+
+/* ----------------------------------------------------------------------- */
+
+.shop {
+    display: grid;
+    grid-template-columns: repeat(4, 205px);
+    gap: 30px;
+    justify-content: center;
+    padding-top: 30px;
+}
+
+
+.item {
+    border: 2px solid #212221;
+    border-radius: 4px;
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 10px;
+}
+
+.price-quantity {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+
+@media (max-width:950px) {
+    .shop {
+        grid-template-columns: repeat(2, 203px);
+    }
+}
+
+
+/* ------------------------------------------------------------------------------------ */
+
+.foot {
+    width: 100%;
+    padding: 50px 50px;
+    height: auto;
+    display: flex;
+    box-sizing: border-box;
+    background-color: whitesmoke;
+    margin-top: 30px;
+    justify-content: space-between;/
+}
+
+.footul {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.foottxt {
+    width: 100%;
+    margin-top: 20px;
+    font-weight: 700;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(204, 121, 62);
+    cursor: none;
+}
+
+.foot>div>div>ul>li{
+    list-style-type: none;
+    font-size: 15px;
+    box-sizing: border-box;
+}
+.foot>div>div>ul>li>b:hover{
+    color: red;
+    cursor: pointer;
+}
+
+.ultop {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(204, 121, 62);
+    font-weight: 800;
+    font-size: 18px;
+    padding-bottom: 5px;
+    box-sizing: border-box;
+}
+
+
+/* ------------------------------------------------------------------------------------ */
+
