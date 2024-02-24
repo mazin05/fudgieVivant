@@ -38,7 +38,7 @@ let generateShop=()=>{
         let{id,name,price,desc,img}=x;
         return `
     <div class="item">
-          <img src="${img}" width="200px" alt="">
+          <img src="${img}" width="175px" alt="">
           <div class="details">
             <h3>${name}</h3>
             <p>${desc}</p>
