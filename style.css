@@ -101,6 +101,23 @@ nav>div{
 
 /* ------------------------------------------------------------------------------------ */
 
+.table{
+    width: 60%;
+}
+
+#menu{
+    padding: 50px 0 100px 0;
+}
+
+#menutxt{
+    font-size: 40px;
+    font-weight: 600;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(204, 121, 62);
+    padding-bottom: 20px;
+}
+/* ------------------------------------------------------------------------------------ */
+
 .foot {
     width: 100%;
     padding: 50px 50px;
