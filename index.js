@@ -3,12 +3,8 @@ var websiteURL = 'https://main--fudgievivant.netlify.app/';
  function openAndRefreshWebsite() {
             // Open the website
             window.location.href = websiteURL;
-
-            // Refresh the page after the specified interval
-            setTimeout(function() {
-                window.location.reload();
-            }, 1000);
-        }
+            window.location.reload();
+ }
 
         // Call the function when the page loads
         window.onload = openAndRefreshWebsite;
