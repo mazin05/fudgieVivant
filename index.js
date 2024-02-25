@@ -19,31 +19,59 @@ let shopItemData=[
     {
         id:"B1",
         name:"Brownie",
-        price:200,
+        price:'***',
         desc:"Hungry! Order Now!!",
         img:"./img/br-img-1.jpg",
     },
     {
         id:"B2",
         name:"Brownie",
-        price:200,
+        price:'***',
         desc:"Hungry! Order Now!!",
         img:"./img/br-img-2.jpg",
     },
     {
         id:"B3",
         name:"Brownie",
-        price:200,
+        price:'***',
         desc:"Hungry! Order Now!!",
         img:"./img/br-img-3.jpg",
     },
     {
         id:"B4",
         name:"Brownie",
-        price:200,
+        price:'***',
         desc:"Hungry! Order Now!!",
         img:"./img/br-img-2.jpg",
-    }
+    },
+    {
+        id:"B5",
+        name:"Brownie",
+        price:'***',
+        desc:"Hungry! Order Now!!",
+        img:"./img/",
+    },
+    {
+        id:"B6",
+        name:"Brownie",
+        price:'***',
+        desc:"Hungry! Order Now!!",
+        img:"./img/",
+    },
+    {
+        id:"B7",
+        name:"Brownie",
+        price:'***',
+        desc:"Hungry! Order Now!!",
+        img:"./img/",
+    },
+    {
+        id:"B8",
+        name:"Brownie",
+        price:'***',
+        desc:"Hungry! Order Now!!",
+        img:"./img/",
+    },
 ];
 
 let cart=[]
