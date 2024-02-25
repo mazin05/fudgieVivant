@@ -1,15 +1,4 @@
- 
-var websiteURL = 'https://main--fudgievivant.netlify.app/';
- function openAndRefreshWebsite() {
-            // Open the website
-            window.location.href = websiteURL;
-            
- }
-
-        // Call the function when the page loads
-        window.reload() = openAndRefreshWebsite;
-
-
+window.location.reload()
 
 // ---------------------------------------------------------
 let shop=document.getElementById('shop');
