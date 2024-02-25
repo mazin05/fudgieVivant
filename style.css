@@ -105,6 +105,9 @@ nav>div{
     width: 60%;
 }
 
+th,td{
+    font-size: 20px;
+}
 #menu{
     padding: 50px 0 100px 0;
 }
@@ -115,6 +118,20 @@ nav>div{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: rgb(204, 121, 62);
     padding-bottom: 20px;
+}
+
+#pnote{
+    font-size: 20px;
+    font-weight: 500;
+    color: rgb(204, 121, 62);
+}
+#insbtn{
+    text-decoration: none;
+    color: red;
+}
+#insbtn:hover{
+    text-decoration: underline;
+    text-decoration-color: gold;
 }
 /* ------------------------------------------------------------------------------------ */
 
