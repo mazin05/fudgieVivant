@@ -3,11 +3,11 @@ var websiteURL = 'https://main--fudgievivant.netlify.app/';
  function openAndRefreshWebsite() {
             // Open the website
             window.location.href = websiteURL;
-            window.location.reload();
+            
  }
 
         // Call the function when the page loads
-        window.onload = openAndRefreshWebsite;
+        window.reload() = openAndRefreshWebsite;
 
 
 
