@@ -1,3 +1,21 @@
+ 
+var websiteURL = 'https://main--fudgievivant.netlify.app/';
+ function openAndRefreshWebsite() {
+            // Open the website
+            window.location.href = websiteURL;
+
+            // Refresh the page after the specified interval
+            setTimeout(function() {
+                window.location.reload();
+            }, 1000);
+        }
+
+        // Call the function when the page loads
+        window.onload = openAndRefreshWebsite;
+
+
+
+// ---------------------------------------------------------
 let shop=document.getElementById('shop');
 
 let shopItemData=[
@@ -52,3 +70,5 @@ let generateShop=()=>{
 };
 
 generateShop();
+
+
