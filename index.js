@@ -21,58 +21,59 @@ let shopItemData=[
         id:"B1",
         name:"Brownie",
         price:'***',
-        desc:"Hungry! Order Now!!",
-        img:"./img/br-img-1.jpg",
+        desc:"½Kg, 1kg",
+        img:"./brownie/brwnie.jpg",
     },
     {
         id:"B2",
-        name:"Brownie",
+        name:"Ultimate Choco",
         price:'***',
-        desc:"Hungry! Order Now!!",
-        img:"./img/br-img-2.jpg",
+        desc:"½Kg, 1kg",
+        img:"./brownie/ultimate.jpg",
     },
     {
         id:"B3",
-        name:"Brownie",
+        name:"Nutella",
         price:'***',
-        desc:"Hungry! Order Now!!",
-        img:"./img/br-img-3.jpg",
+        desc:"½Kg, 1kg",
+        img:"./brownie/nutella.jpg",
     },
     {
         id:"B4",
-        name:"Brownie",
+        name:"Peanut Butter",
         price:'***',
-        desc:"Hungry! Order Now!!",
-        img:"./img/br-img-2.jpg",
+        desc:"½Kg, 1kg",
+        img:"./brownie/peanut.jpg",
     },
     {
         id:"B5",
-        name:"Brownie",
+        name:"Nuts",
         price:'***',
-        desc:"Hungry! Order Now!!",
-        img:"./img/",
+        desc:"On Process",
+        img:"./brownie/nuts.jpg",
     },
     {
         id:"B6",
-        name:"Brownie",
+        name:"HazelNut",
         price:'***',
         desc:"Hungry! Order Now!!",
-        img:"./img/",
+        img:"./brownie/hazelnut.jpg",
     },
     {
         id:"B7",
-        name:"Brownie",
+        name:"Coffee",
         price:'***',
         desc:"Hungry! Order Now!!",
-        img:"./img/",
+        img:"./brownie/coffee.jpg",
     },
     {
         id:"B8",
-        name:"Brownie",
+        name:"Brownie Bites",
         price:'***',
         desc:"Hungry! Order Now!!",
-        img:"./img/",
+        img:"./brownie/bites.jpg",
     },
+   
 ];
 
 let cart=[]
@@ -85,10 +86,7 @@ let generateShop=()=>{
           <img src="${img}" width="200px" alt="">
           <div class="details">
             <h3>${name}</h3>
-            <p>${desc}</p>
-          <div class="price-quantity">
-            <h3>Rs.${price}</h3>
-          </div>
+            <p>Available in Pieces, ½ Kg, 1kg (Prices Below)</p>       
           </div>
         </div>
     `
