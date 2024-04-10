@@ -2,43 +2,324 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>CART</title>
-    <link rel="icon" href="" />
+    <meta name="viewport" content="width=1024" />
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1" /> -->
+    <title>Fudgie Vivant</title>
     <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css"
-    />
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
-    ></script>
+    />
+    <link
+      rel="icon"
+      href="./img/Yellow Minimalist Round Shaped Cafe Logo.png"
+    />
     <link rel="stylesheet" href="style.css" />
-    <style></style>
   </head>
-
   <body>
-    <div class="navbar">
-      <h2>Cloths</h2>
-      <div class="cart">
-        <i class="bi bi-cart"></i>
-        <div id="cartamount" class="cartamount">0</div>
-      </div>
+    <!-- ------------------------------------------------------------------------------------------------- -->
+
+    <div id="myDiv">
+    <div id="toppart">
+        <center>
+            Follow us on <a
+            href="https://www.instagram.com/fudgie.vivant/"
+            target="_blank"
+            id="insbtntop"
+            >INSTAGRAM</a
+          > <img src="./img/verified.png" alt="" id="verified">
+        </center>
     </div>
+    <!-- ------------------------------------------------------------------------------------------------- -->
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="./index.html"><b>ꜰᴜᴅɢɪᴇ ᴠɪᴠᴀɴᴛ</b></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#shop">Brownie'z</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#menu">Menu</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#browniepart">Rapture</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#footerpart">Contact</a>
+            </li>
+            <!-- <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                >About
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </li>
+              </ul>
+            </li> -->
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ----------------------------------------------------------------------------------------------- -->
+
+    <div
+      id="carouselExampleFade"
+      class="carousel slide carousel-fade"
+      data-bs-ride="carousel"
+      data-bs-interval="1900"
+    >
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="./img/bnr-1.png" class="" alt="..." />
+        </div>
+        <div class="carousel-item">
+          <img src="./img/bnr-2.png" class="" alt="..." />
+        </div>
+        <div class="carousel-item">
+          <img src="./img/bnr-3.png" class="" alt="..." />
+        </div>
+        <div class="carousel-item">
+          <img src="./img/bnr-4.png" class="" alt="..." />
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleFade"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleFade"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <marquee behavior="" direction="" class="marq" scrollamount="15">
+      ✨ ✨ ✨ ✨ ✨ ✨ ✨ Fudgie Vivant Exclusive ✨ ✨ ✨ ✨ ✨ ✨
+    </marquee>
+    <!-- ----------------------------------------------------------------------------------------------- -->
+
+    <!-- <div class="container" id="hijabitxt">
+      <center>
+        <img src="./img/nazsha.png" alt="Hijab" class="hijab" />
+        <div class="overlay">
+          <div class="text">WELCOME</div>
+        </div>
+      </center> 
+    </div> -->
+
+    <!-- ----------------------------------------------------------------------------------------------- -->
 
     <div class="shop" id="shop"></div>
 
-    <script src="./cart.js"></script>
+    <!-- ----------------------------------------------------------------------------------------------- -->
+    <div id="menu">
+      <center>
+        <h3 id="menutxt">Fudgie Vivant's Menu</h3>
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th style="width:5%">#</th>
+              <th style="width:10%">Item</th>
+              <th style="width:15%">Name</th>
+              <th style="width:20%">Price</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>FVB001</td>
+              <td>Brownie</td>
+              <td>₹40 (1 ᴘɪᴇᴄᴇ) / ₹220 (¼ Kg) </td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>FVB002</td>
+              <td>Ultimate Choco Brownie</td>
+              <td>₹120 (2 ᴘɪᴇᴄᴇꜱ) / ₹260 (¼ Kg) </td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td>FVB003</td>
+              <td>Oreo Brownie</td>
+              <td>₹199 (4 ᴘɪᴇᴄᴇꜱ) </td>
+            </tr>
+            <tr>
+              <th scope="row">4</th>
+              <td>FVB004</td>
+              <td>Peanut Butter Brownie</td>
+              <td>₹230 (4 ᴘɪᴇᴄᴇꜱ) </td>
+            </tr>
+            <tr id="vivanttable">
+              <th scope="row">5</th>
+              <td>FVB005</td>
+              <td>Vivant Brownie (SPL)</td>
+              <td>₹350 (4 ᴘɪᴇᴄᴇꜱ)</td>
+            </tr>
+            <tr>
+              <th scope="row">6</th>
+              <td>FVB006</td>
+              <td>HazelNut Brownie</td>
+              <td>₹399 (¼ Kg) </td>
+            </tr>
+            <tr>
+              <th scope="row">7</th>
+              <td>FVB007</td>
+              <td>Coffee Brownie</td>
+              <td>₹269 (4 ᴘɪᴇᴄᴇꜱ)</td>
+            </tr>
+            <tr>
+              <th scope="row">8</th>
+              <td>FVB008</td>
+              <td>Brownie Bites</td>
+              <td>₹130 (150 Grms)</td>
+            </tr>
+            <tr>
+              <th scope="row">9</th>
+              <td>FVB009</td>
+              <td><marquee behavior="" direction="" id="added">TO BE ADDED</marquee></td>
+              <td><marquee behavior="" direction="" id="added">TO BE ADDED</marquee></td>
+            </tr>
+            <tr>
+              <th scope="row">10</th>
+              <td>FVB010</td>
+              <td><marquee behavior="" direction="" id="added">TO BE ADDED</marquee></td>
+              <td><marquee behavior="" direction="" id="added">TO BE ADDED</marquee></td>
+            </tr>
+          </tbody>
+        </table>
+        <p id="pnote"> + Shipping Based on Order* // DM for ½ Kg and 1kg Orders</p>
+        <p id="pnote">
+          Note: Orders will taken only via
+          <a
+            href="https://www.instagram.com/fudgie.vivant/"
+            target="_blank"
+            id="insbtn"
+            >INSTAGRAM (Click here)</a
+          >
+        </p>
+      </center>
+    </div>
+    <!-- ----------------------------------------------------------------------------------------------- -->
+
+    <div class="container text-center" id="browniepart">
+      <center id="rapture">𝔹𝕣𝕠𝕨𝕟𝕚𝕖 ℝ𝕒𝕡𝕥𝕦𝕣𝕖</center>
+      <div class="row align-items-center">
+        <div class="col" id="img1">
+          <img src="./img/b1.jpg" alt="" />
+        </div>
+        <div class="col">
+          <img src="./img/b2.jpg" alt="" />
+        </div>
+        <div class="col">
+          <img src="./img/b3.jpg" alt="" />
+        </div>
+      </div>
+    </div>
+
+    <!-- ----------------------------------------------------------------------------------------------- -->
+
+    <div id="menu" class="mennu">
+      <center>
+        <h3 id="menutxt1">
+          Most Popular Cakes with Special Features at Fudgie Vivant
+        </h3>
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Cakes By Type</th>
+              <th>Cakes By Flavour</th>
+              <th>Cakes By Occasion</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>Regular Cakes</td>
+              <td>Butterscotch Cakes</td>
+              <td>Birthday Cakes</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>Brownie</td>
+              <td>More Variety*</td>
+              <td>Daily Treat</td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td>Designer Cakes</td>
+              <td>Chocolate Cakes</td>
+              <td>Birthday Cakes</td>
+            </tr>
+          </tbody>
+        </table>
+      </center>
+    </div>
+
+    <!-- ----------------------------------------------------------------------------------------------- -->
+
+    <footer id="footerpart">
+      <center>
+        <div class="foot">
+          <div>
+            <h3 class="foottxt">Fudgie Vivant ©️ 2024-All rights reserved.</h3>
+          </div>
+          <div class="footul">
+            <div class="col-md-4">
+              <ul>
+                <li class="ultop">Contact Us</li>
+                <li>16x5 Enquiry Support(Sunday Holiday)</li>
+                <li><b><a href="https://bit.ly/fudgieVivant"  id="contact" target="_blank">www.fudgievivant.com</a></b></li>
+                <li>General : <b><a href="https://linktr.ee/fudgievivant" target="_blank" id="contact">Contactus@fudgievivant.com</a></b></li>
+                <li>Corporate : <b>B2B@fudgievivant.com</b></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </center>
+    </footer>
+
+    <!-- ----------------------------------------------------------------------------------------------- -->
+
+    <script src="./index.js"></script>
     <script
-      src="https://code.jquery.com/jquery-1.12.4.min.js"
-      integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
-      integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
   </body>
