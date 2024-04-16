@@ -40,7 +40,7 @@ let shopItemData=[
     },
     {
         id:"B4",
-        name:"Peanut Butter",
+        name:"Peanut Butter (Stock Out)",
         price:'***',
         desc:"½Kg, 1kg",
         img:"./brownie/peanut.jpg",
@@ -61,7 +61,7 @@ let shopItemData=[
     },
     {
         id:"B7",
-        name:"Coffee",
+        name:"Coffee (Stock Out)",
         price:'***',
         desc:"Hungry! Order Now!!",
         img:"./brownie/coffee.jpg",
