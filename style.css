@@ -193,6 +193,80 @@ th,td{
 }
 /* ------------------------------------------------------------------------------------ */
 
+/* Footer Styling */
+#footerpart {
+    background-color:whitesmoke;
+    color: black;
+    padding: 20px 0;
+    font-weight: 600;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-logo img {
+    width: 45%; /* Adjust size as needed */
+    height: auto;
+    border-radius: 50%;
+}
+
+.footer-text, .footer-links {
+    text-align: center;
+}
+
+.footer-text h3 {
+    font-size: 16px;
+    margin: 0;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: red;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.footer-heading {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-logo {
+        margin-bottom: 20px;
+    }
+}
+
+
+/* 
 .foot {
     width: 100%;
     padding: 50px 50px;
@@ -236,7 +310,7 @@ th,td{
 #contact:hover {
     color: red;
     cursor: pointer;
-}
+} */
 
 .ultop {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;

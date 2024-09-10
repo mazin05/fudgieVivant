@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1" /> -->
+    <title>Fudgie Vivant</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+
+    <link
+    rel="icon"
+    href="./img/Yellow Minimalist Round Shaped Cafe Logo.png"
+  />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+     body {
+            font-family: Arial, sans-serif;
+        }
+
+        .grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns */
+    grid-gap: 20px; /* Gap between the grid items */
+}
+
+/* Instagram post styling */
+.instagram-media {
+    background: #FFF;
+    border: 0;
+    border-radius: 10px;
+    box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.5), 0 1px 10px 0 rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    width: 100%; /* Ensures the blockquote takes full width of the grid cell */
+    height: 400px; /* Fixed height */
+    position: relative;
+    opacity: 0;
+    transform: translateY(50px); /* Start off-screen */
+    animation: fadeInUp 1.5s ease forwards;
+}
+
+/* Make sure the images fill the blockquote container */
+.instagram-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures images cover the blockquote area without distortion */
+}
+
+/* Animating posts with a delay */
+.grid-container .instagram-media:nth-child(1) {
+    animation-delay: 0.1s;
+}
+.grid-container .instagram-media:nth-child(2) {
+    animation-delay: 0.3s;
+}
+.grid-container .instagram-media:nth-child(3) {
+    animation-delay: 0.5s;
+}
+.grid-container .instagram-media:nth-child(4) {
+    animation-delay: 0.7s;
+}
+
+/* Animation for posts loading with a fade and slide-up effect */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Hover effect to scale up slightly */
+.instagram-media:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+/* Responsive Design */
+@media(min-width: 1500px) {
+    .grid-container {
+        grid-template-columns: repeat(4, 1fr); /* 4 columns for large screens */
+    }
+}
+
+@media(min-width: 1000px) and (max-width: 1499px) {
+    .grid-container {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns for medium screens */
+    }
+}
+
+@media(max-width: 1024px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for smaller screens */
+    }
+}
+
+@media(max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr; /* 1 column for mobile screens */
+    }
+}
+
+
+    </style>
+</head>
+<body>
+
+    <div id="myDiv">
+        <div id="toppart">
+            <center>
+                Follow us on <a
+                href="https://www.instagram.com/fudgie.vivant/"
+                target="_blank"
+                id="insbtntop"
+                >INSTAGRAM</a
+              > <img src="./img/verified.png" alt="" id="verified">
+            </center>
+        </div>
+        <!-- ------------------------------------------------------------------------------------------------- -->
+        <nav class="navbar navbar-expand-lg">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="./index.html"><b>ꜰᴜᴅɢɪᴇ ᴠɪᴠᴀɴᴛ</b></a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./posts.html">Posts</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#shop">Brownie'z</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#menu">Menu</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#browniepart">Rapture</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#footerpart">Contact</a>
+                </li>
+                
+              </ul>
+            </div>
+          </div>
+        </nav>
+    <br>
+    <br>
+    <br>
+<center>
+    <!-- Grid container for Instagram posts -->
+    <div class="grid-container">
+        <!-- First Instagram Post -->
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/C5WNntEhxND/?igsh=MW8waWx5ZzExZDA5eA==" data-instgrm-version="14">
+            <div style="padding:16px;">
+                <a href="https://www.instagram.com/p/C5WNntEhxND/?igsh=MW8waWx5ZzExZDA5eA==" style=" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;" target="_blank">View this post on Instagram</a>
+            </div>
+        </blockquote>
+        <!-- Second Instagram Post -->
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/C4YfrMihggn/?igsh=MjRnenplbHIyZWow" data-instgrm-version="14">
+            <div style="padding:16px;">
+                <a href="https://www.instagram.com/p/C4YfrMihggn/?igsh=MjRnenplbHIyZWow" style=" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;" target="_blank">View this post on Instagram</a>
+            </div>
+        </blockquote>
+
+        <!-- Third Instagram Post -->
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/C5bJeO8BHlK/?igsh=dHM5Ym9jZjZsYnV5" data-instgrm-version="14">
+            <div style="padding:16px;">
+                <a href="https://www.instagram.com/p/C5bJeO8BHlK/?igsh=dHM5Ym9jZjZsYnV5" style=" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;" target="_blank">View this post on Instagram</a>
+            </div>
+        </blockquote>
+
+        <!-- Fourth Instagram Post -->
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/C5bJi8Eh5xZ/?igsh=MXR1cnF2b3E4djdmeQ==" data-instgrm-version="14">
+            <div style="padding:16px;">
+                <a href="https://www.instagram.com/p/C5bJi8Eh5xZ/?igsh=MXR1cnF2b3E4djdmeQ==" style=" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;" target="_blank">View this post on Instagram</a>
+            </div>
+        </blockquote>
+
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/C5bJuiyh7wR/?igsh=MWJxbW5uaDdsZW12MQ==" data-instgrm-version="14">
+            <div style="padding:16px;">
+                <a href="https://www.instagram.com/p/C5bJuiyh7wR/?igsh=MWJxbW5uaDdsZW12MQ==" style=" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;" target="_blank">View this post on Instagram</a>
+            </div>
+        </blockquote>
+
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/C5bJ6YGBGsi/?igsh=ZnVtdWVpanM5YXZr" data-instgrm-version="14">
+            <div style="padding:16px;">
+                <a href="https://www.instagram.com/p/C5bJ6YGBGsi/?igsh=ZnVtdWVpanM5YXZr" style=" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;" target="_blank">View this post on Instagram</a>
+            </div>
+        </blockquote>
+
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/C5bKJESBD89/?igsh=MWUyNncwMGUyYWk3aQ==" data-instgrm-version="14">
+            <div style="padding:16px;">
+                <a href="https://www.instagram.com/p/C5bKJESBD89/?igsh=MWUyNncwMGUyYWk3aQ==" style=" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;" target="_blank">View this post on Instagram</a>
+            </div>
+        </blockquote>
+
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/C5bKPbbhXUb/?igsh=eW41eDkwczh3cWxi" data-instgrm-version="14">
+            <div style="padding:16px;">
+                <a href="https://www.instagram.com/p/C5bKPbbhXUb/?igsh=eW41eDkwczh3cWxi" style=" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;" target="_blank">View this post on Instagram</a>
+            </div>
+        </blockquote>
+
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/C5bKVFFhn5V/?igsh=cHExcGZxcDVwZDNx" data-instgrm-version="14">
+            <div style="padding:16px;">
+                <a href="https://www.instagram.com/p/C5bKVFFhn5V/?igsh=cHExcGZxcDVwZDNx" style=" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;" target="_blank">View this post on Instagram</a>
+            </div>
+        </blockquote>
+
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/C5bKZvMBtQd/?igsh=MWxyaGI0M2FhMHQ4Yw==" data-instgrm-version="14">
+            <div style="padding:16px;">
+                <a href="https://www.instagram.com/p/C5bKZvMBtQd/?igsh=MWxyaGI0M2FhMHQ4Yw==" style=" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;" target="_blank">View this post on Instagram</a>
+            </div>
+        </blockquote>
+
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/C5yOmPbBp9l/?igsh=a2RkeGR2djQ0MzJt" data-instgrm-version="14">
+            <div style="padding:16px;">
+                <a href="https://www.instagram.com/p/C5yOmPbBp9l/?igsh=a2RkeGR2djQ0MzJt" style=" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;" target="_blank">View this post on Instagram</a>
+            </div>
+        </blockquote>
+
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/C523R2hhzYN/?igsh=MWY1NWpiZXIxMDRzag==" data-instgrm-version="14">
+            <div style="padding:16px;">
+                <a href="https://www.instagram.com/p/C523R2hhzYN/?igsh=MWY1NWpiZXIxMDRzag==" style=" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;" target="_blank">View this post on Instagram</a>
+            </div>
+        </blockquote>
+<!-- 
+        <blockquote class="instagram-media" data-instgrm-permalink="" data-instgrm-version="14">
+            <div style="padding:16px;">
+                <a href="" style=" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;" target="_blank">View this post on Instagram</a>
+            </div>
+        </blockquote> -->
+    </div>
+</center>
+
+
+<footer id="footerpart">
+    <div class="footer-container">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <a href="https://www.instagram.com/fudgie.vivant/" target="_blank">
+                    <img src="./img/fv-logo.jpg" alt="Instagram Logo">
+                </a>
+            </div>
+            <div class="footer-text">
+                <h3>Fudgie Vivant ©️ 2024 - All rights reserved.</h3>
+            </div>
+            <div class="footer-links">
+                <ul>
+                    <li class="footer-heading">Contact Us</li>
+                    <li>16x5 Enquiry Support (Sunday Holiday)</li>
+                    <li><a href="https://bit.ly/fudgieVivant" target="_blank">www.fudgievivant.com</a></li>
+                    <li>General: <a href="mailto:Contactus@fudgievivant.com">Contactus@fudgievivant.com</a></li>
+                    <li>Corporate: B2B@fudgievivant.com</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- Load Instagram Embed Script -->
+    <script async src="//www.instagram.com/embed.js"></script>
+    <script src="./index.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
