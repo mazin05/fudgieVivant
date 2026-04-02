@@ -2,35 +2,57 @@ function renderShop() {
   const grid = document.getElementById('shopGrid');
 
   grid.innerHTML = shopItems.map(item => `
-    <div class="bg-[#111] border border-white/5 rounded-2xl overflow-hidden group">
+    <div class="bg-white border rounded-2xl overflow-hidden hover:shadow-lg transition">
 
-      <div class="overflow-hidden">
-        <img src="${item.img}"
-             class="h-56 w-full object-cover group-hover:scale-110 transition duration-700">
-      </div>
+      <img src="${item.img}" class="h-52 w-full object-cover">
 
-      <div class="p-6">
+      <div class="p-5">
 
-        <p class="text-xs text-[#D4AF37] tracking-widest">${item.id}</p>
+        <p class="text-xs text-rose-500">${item.id}</p>
 
-        <h4 class="luxury text-xl mt-2">${item.name}</h4>
+        <h4 class="font-semibold text-lg mt-1">${item.name}</h4>
 
-        <p class="text-white/50 text-sm mt-2">${item.desc}</p>
+        <p class="text-gray-500 text-sm mt-2">${item.desc}</p>
 
-        <div class="flex justify-between items-center mt-5">
+        <p class="text-rose-500 mt-3 font-medium">${item.price}</p>
 
-          <span class="text-[#D4AF37] text-sm">${item.price}</span>
-
-          <a href="https://instagram.com/fudgie.vivant"
-             target="_blank"
-             class="text-xs border border-[#D4AF37] px-4 py-1 rounded-full hover:bg-[#D4AF37] hover:text-black transition">
-             Order
-          </a>
-
-        </div>
+        <a href="https://instagram.com/fudgie.vivant"
+           class="block mt-4 text-center bg-rose-500 text-white py-2 rounded-full text-sm">
+           Order
+        </a>
 
       </div>
 
     </div>
   `).join('');
 }
+
+function renderMenu() {
+  const tbody = document.getElementById('menuBody');
+
+  tbody.innerHTML = menuItems.map(item => `
+    <tr class="border-b">
+      <td class="py-3 text-rose-500">${item.code}</td>
+      <td>${item.name}</td>
+      <td>${item.price}</td>
+    </tr>
+  `).join('');
+}
+
+function renderCakes() {
+  const tbody = document.getElementById('cakeBody');
+
+  tbody.innerHTML = cakeItems.map(item => `
+    <tr class="border-b">
+      <td class="py-3">${item.type}</td>
+      <td>${item.flavour}</td>
+      <td>${item.occasion}</td>
+    </tr>
+  `).join('');
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  renderShop();
+  renderMenu();
+  renderCakes();
+});
