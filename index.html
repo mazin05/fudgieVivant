@@ -3,396 +3,124 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Fudgie Vivant — Artisan Brownies</title>
-<link rel="icon" href="./img/Yellow Minimalist Round Shaped Cafe Logo.png">
-<!-- Google Fonts: modern & airy -->
-<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&family=Playfair+Display:ital,wght@0,500;0,700;1,500&display=swap" rel="stylesheet">
-<!-- Tailwind CSS v4 + Font Awesome -->
+
+<title>Fudgie Vivant</title>
+
+<!-- Tailwind v4 CDN -->
 <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-<!-- jQuery & Bootstrap JS (for carousel & collapse) -->
-<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
 <style>
-  /* Custom soft animations & overrides */
-  body {
-    font-family: 'Inter', sans-serif;
-    background: #FEFCF5;
-  }
-  .font-serif-alt {
-    font-family: 'Playfair Display', serif;
-  }
-  .carousel-fade .carousel-item {
-    transition: opacity 0.9s ease-in-out;
-  }
-  @keyframes floatUp {
-    0% { opacity: 0; transform: translateY(0) rotate(0deg); }
-    15% { opacity: 0.5; }
-    85% { opacity: 0.4; }
-    100% { opacity: 0; transform: translateY(-120vh) rotate(360deg); }
-  }
-  .chip-float {
-    position: absolute;
-    pointer-events: none;
-    animation: floatUp linear infinite;
-  }
-  .marquee-track {
-    display: inline-block;
-    animation: marqueeScroll 24s linear infinite;
-  }
-  @keyframes marqueeScroll {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
-  }
-  .reveal {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.7s cubic-bezier(0.2, 0.9, 0.4, 1.1), transform 0.7s ease;
-  }
-  .reveal.visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  .product-card {
-    transition: all 0.35s ease;
-  }
-  .product-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 20px 30px -12px rgba(0, 0, 0, 0.12);
-  }
-  .gallery-hover img {
-    transition: transform 0.5s ease;
-  }
-  .gallery-hover:hover img {
-    transform: scale(1.03);
-  }
-  .nav-link-fresh {
-    transition: all 0.2s;
-  }
-  .nav-link-fresh:hover {
-    background-color: #FEE2C5;
-    color: #C05E2E;
-  }
-  .active-nav {
-    background-color: #FEE2C5;
-    color: #C05E2E !important;
-    font-weight: 600;
-  }
-  /* custom table styling for clean look */
-  .menu-table-fresh td, .menu-table-fresh th {
-    padding: 14px 18px;
-    border-bottom: 1px solid #F0E3D5;
-  }
-  .menu-table-fresh tr:last-child td {
-    border-bottom: none;
-  }
-  .cake-table-fresh td, .cake-table-fresh th {
-    padding: 12px 18px;
-    border-bottom: 1px solid #F0E3D5;
-  }
-  @media (max-width: 640px) {
-    .menu-table-fresh td, .menu-table-fresh th { padding: 10px 12px; font-size: 0.8rem; }
-  }
+  body { font-family: 'Inter', sans-serif; }
+  .font-display { font-family: 'Playfair Display', serif; }
 </style>
 </head>
-<body class="bg-[#FEFCF5] text-stone-800">
 
-<!-- Announcement Bar - fresh light terracotta -->
-<div class="bg-[#FCE8D9] text-[#B85C2A] text-center py-2.5 px-4 text-xs font-semibold tracking-wide flex items-center justify-center gap-3 flex-wrap">
-  <span>🍫 Follow our sweet journey</span>
-  <a href="https://www.instagram.com/fudgie.vivant/" target="_blank" class="inline-flex items-center gap-1.5 text-[#C05E2E] hover:text-[#9B431E] font-bold transition"><i class="fab fa-instagram text-sm"></i> @fudgie.vivant</a>
-  <img src="./img/verified.png" alt="verified" class="w-4 h-4 inline">
-</div>
+<body class="bg-[#0f0f0f] text-white">
 
-<!-- Navbar - minimal, clean, sticky -->
-<nav id="mainNav" class="sticky top-0 z-50 bg-white/90 backdrop-blur-sm border-b border-[#F0E3D5] transition-shadow duration-300">
-  <div class="max-w-7xl mx-auto px-5 md:px-8 py-3 flex items-center justify-between">
-    <a class="flex items-baseline gap-0 no-underline" href="./index.html">
-      <span class="font-serif-alt text-3xl md:text-4xl font-bold italic text-[#C05E2E] tracking-tight">Fudgie</span>
-      <span class="font-serif-alt text-xl md:text-2xl text-stone-500 font-medium ml-1">Vivant</span>
-    </a>
-    <button class="block md:hidden border border-stone-300 rounded-lg p-1.5" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContentFresh" aria-label="Menu">
-      <i class="fas fa-bars text-stone-600"></i>
-    </button>
-    <div class="collapse navbar-collapse md:block" id="navbarContentFresh">
-      <ul class="flex flex-col md:flex-row md:items-center gap-1 md:gap-2 mt-3 md:mt-0">
-        <li><a class="nav-link-fresh block px-4 py-1.5 text-sm font-semibold text-stone-700 rounded-full transition" href="./index.html">Home</a></li>
-        <li><a class="nav-link-fresh block px-4 py-1.5 text-sm font-semibold text-stone-700 rounded-full transition" href="./posts.html">Posts</a></li>
-        <li><a class="nav-link-fresh block px-4 py-1.5 text-sm font-semibold text-stone-700 rounded-full transition" href="#shop">Brownie'z</a></li>
-        <li><a class="nav-link-fresh block px-4 py-1.5 text-sm font-semibold text-stone-700 rounded-full transition" href="#menu">Menu</a></li>
-        <li><a class="nav-link-fresh block px-4 py-1.5 text-sm font-semibold text-stone-700 rounded-full transition" href="#browniepart">Gallery</a></li>
-        <li><a class="nav-link-fresh block px-4 py-1.5 text-sm font-semibold text-stone-700 rounded-full transition" href="#footerpart">Contact</a></li>
-      </ul>
+<!-- NAV -->
+<header class="fixed w-full z-50 backdrop-blur bg-black/40 border-b border-white/10">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+    
+    <h1 class="font-display text-2xl tracking-wide">
+      Fudgie <span class="text-pink-400">Vivant</span>
+    </h1>
+
+    <nav class="hidden md:flex gap-8 text-sm text-white/70">
+      <a href="#shop" class="hover:text-white">Shop</a>
+      <a href="#menu" class="hover:text-white">Menu</a>
+      <a href="#gallery" class="hover:text-white">Gallery</a>
+    </nav>
+
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="min-h-screen flex items-center justify-center text-center px-6">
+
+  <div class="max-w-3xl">
+    <h2 class="font-display text-5xl md:text-7xl leading-tight">
+      Artisan <br>
+      <span class="text-pink-400">Brownies</span>
+    </h2>
+
+    <p class="mt-6 text-white/60 text-lg">
+      Handmade with premium chocolate & love — every bite melts.
+    </p>
+
+    <div class="mt-8 flex justify-center gap-4">
+      <a href="#shop" class="px-6 py-3 bg-pink-500 rounded-full hover:scale-105 transition">
+        Order Now
+      </a>
+      <a href="#menu" class="px-6 py-3 border border-white/20 rounded-full hover:bg-white/10 transition">
+        View Menu
+      </a>
     </div>
   </div>
-</nav>
 
-<!-- Hero Section - fresh, bright, warm cream & soft peach -->
-<section id="hero" class="relative overflow-hidden bg-gradient-to-br from-[#FFF6ED] via-[#FFF2E6] to-[#FEEBDC] py-20 md:py-28">
-  <div class="chips-container absolute inset-0 pointer-events-none z-0" id="chipsContainer"></div>
-  <div class="relative z-10 max-w-7xl mx-auto px-6 md:px-8 flex flex-col md:flex-row items-center gap-12">
-    <div class="flex-1 text-center md:text-left">
-      <div class="inline-block bg-white/60 backdrop-blur-sm rounded-full px-4 py-1 text-xs font-bold tracking-wider text-[#C05E2E] border border-[#FAD5B5] mb-5">✦ HANDCRAFTED SINCE 2024 ✦</div>
-      <h1 class="font-serif-alt text-6xl md:text-7xl lg:text-8xl font-bold italic text-stone-800 leading-[1.1] mb-4">
-        Fudgie <span class="text-[#C05E2E]">Vivant</span>
-      </h1>
-      <p class="text-stone-600 text-lg md:text-xl max-w-lg mx-auto md:mx-0 mb-8 leading-relaxed">Artisan brownies baked with love & dark chocolate — every bite is a celebration of fudge.</p>
-      <div class="flex gap-4 justify-center md:justify-start flex-wrap">
-        <a href="#shop" class="bg-[#C05E2E] text-white px-7 py-3.5 rounded-full text-sm font-bold tracking-wide shadow-md hover:bg-[#A84E22] transition-all hover:shadow-lg">Order Now <i class="fas fa-arrow-right ml-1 text-xs"></i></a>
-        <a href="#menu" class="border-2 border-[#D9C2A7] text-stone-700 px-7 py-3.5 rounded-full text-sm font-bold hover:bg-white/50 transition">View Menu</a>
-      </div>
-    </div>
-    <div class="flex-1 w-full max-w-md md:max-w-full">
-      <div class="rounded-3xl overflow-hidden shadow-2xl aspect-[4/3] bg-white">
-        <div id="heroCarousel" class="carousel slide carousel-fade h-full" data-bs-ride="carousel" data-bs-interval="2300">
-          <div class="carousel-inner h-full">
-            <div class="carousel-item active h-full"><img src="./img/bnr-1.png" class="w-full h-full object-cover" alt="Brownie"></div>
-            <div class="carousel-item h-full"><img src="./img/bnr-2.png" class="w-full h-full object-cover" alt="Brownie"></div>
-            <div class="carousel-item h-full"><img src="./img/bnr-3.png" class="w-full h-full object-cover" alt="Brownie"></div>
-            <div class="carousel-item h-full"><img src="./img/bnr-4.png" class="w-full h-full object-cover" alt="Brownie"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
 </section>
 
-<!-- Marquee - fun & energetic -->
-<div class="bg-[#EADBC6] py-3 overflow-hidden whitespace-nowrap">
-  <div class="marquee-track inline-block">
-    <span class="text-stone-700 text-sm font-semibold mx-8">✨ Fudgie Vivant Exclusive</span>
-    <span class="text-stone-700 text-sm font-semibold mx-8">🍫 Fresh Baked Daily</span>
-    <span class="text-stone-700 text-sm font-semibold mx-8">✨ Order via Instagram DM</span>
-    <span class="text-stone-700 text-sm font-semibold mx-8">🍫 Premium Dark Chocolate</span>
-    <span class="text-stone-700 text-sm font-semibold mx-8">✨ Fudgie Vivant Exclusive</span>
-    <span class="text-stone-700 text-sm font-semibold mx-8">🍫 Fresh Baked Daily</span>
-    <span class="text-stone-700 text-sm font-semibold mx-8">✨ Order via Instagram DM</span>
-    <span class="text-stone-700 text-sm font-semibold mx-8">🍫 Premium Dark Chocolate</span>
-  </div>
-</div>
+<!-- SHOP -->
+<section id="shop" class="py-20 px-6 max-w-7xl mx-auto">
 
-<!-- SHOP SECTION - Brownie'z -->
-<section id="shop" class="py-24 px-6 md:px-8 bg-white">
-  <div class="max-w-7xl mx-auto">
-    <div class="text-center mb-14">
-      <span class="text-[#C05E2E] text-sm font-bold tracking-[0.2em] uppercase">Our Collection</span>
-      <h2 class="font-serif-alt text-4xl md:text-5xl font-bold text-stone-800 mt-2">Brownie'z</h2>
-      <div class="w-20 h-0.5 bg-[#F0C9A8] mx-auto mt-4 mb-4"></div>
-      <p class="text-stone-500 max-w-lg mx-auto">Small-batch, fudgy, and utterly irresistible — each crafted to perfection.</p>
-    </div>
-    <div id="shopGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8"></div>
-    <div class="text-center mt-12 text-stone-500 bg-[#FEF6ED] py-4 rounded-2xl">
-      <i class="fab fa-instagram text-[#C05E2E] mr-2"></i> Orders taken via <a href="https://www.instagram.com/fudgie.vivant/" target="_blank" class="font-bold text-[#C05E2E] hover:underline">Instagram DM</a> · ½ Kg & 1 Kg available
-    </div>
-  </div>
+  <h3 class="text-3xl font-display mb-12 text-center">
+    Our Brownies
+  </h3>
+
+  <div id="shopGrid" class="grid md:grid-cols-3 gap-8"></div>
+
 </section>
 
-<!-- MENU SECTION (clean table) -->
-<section id="menu" class="py-24 px-6 md:px-8 bg-[#FEF8F2]">
+<!-- MENU -->
+<section id="menu" class="py-20 px-6 bg-[#141414]">
+
   <div class="max-w-4xl mx-auto">
-    <div class="text-center mb-12">
-      <span class="text-[#C05E2E] text-sm font-bold tracking-[0.2em] uppercase">Full Pricelist</span>
-      <h2 class="font-serif-alt text-4xl md:text-5xl font-bold text-stone-800 mt-1">Menu</h2>
-    </div>
-    <div class="bg-white rounded-2xl shadow-sm border border-[#F0E3D5] overflow-hidden">
-      <div class="overflow-x-auto">
-        <table class="w-full text-left menu-table-fresh">
-          <thead class="bg-[#FEF1E6]">
-            <tr><th class="text-stone-700 font-bold text-sm">#</th><th class="text-stone-700 font-bold text-sm">Code</th><th class="text-stone-700 font-bold text-sm">Item</th><th class="text-stone-700 font-bold text-sm">Price</th></tr>
-          </thead>
-          <tbody id="menuBody"></tbody>
-        </table>
-      </div>
-    </div>
-    <p class="text-center text-stone-400 text-sm mt-6 italic">* Shipping charged based on location | DM for bulk/corporate orders</p>
+    <h3 class="text-3xl font-display text-center mb-10">Menu</h3>
+
+    <table class="w-full text-left text-sm">
+      <thead class="text-white/60 border-b border-white/10">
+        <tr>
+          <th class="py-3">Code</th>
+          <th>Name</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+
+      <tbody id="menuBody"></tbody>
+    </table>
   </div>
+
 </section>
 
-<!-- GALLERY (Brownie Rapture) -->
-<section id="browniepart" class="py-24 px-6 md:px-8 bg-white">
-  <div class="max-w-6xl mx-auto">
-    <div class="text-center mb-12">
-      <span class="text-[#C05E2E] text-sm font-bold tracking-[0.2em] uppercase">Gallery</span>
-      <h2 class="font-serif-alt text-5xl md:text-6xl text-stone-800 italic">Brownie Rapture</h2>
-    </div>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[280px]">
-      <div class="md:row-span-2 rounded-2xl overflow-hidden shadow-lg gallery-hover"><img src="./img/b1.jpg" class="w-full h-full object-cover" alt="Brownie"></div>
-      <div class="rounded-2xl overflow-hidden shadow-lg gallery-hover"><img src="./img/b2.jpg" class="w-full h-full object-cover" alt="Brownie"></div>
-      <div class="rounded-2xl overflow-hidden shadow-lg gallery-hover"><img src="./img/b3.jpg" class="w-full h-full object-cover" alt="Brownie"></div>
-    </div>
+<!-- GALLERY -->
+<section id="gallery" class="py-20 px-6 max-w-7xl mx-auto">
+
+  <h3 class="text-3xl font-display text-center mb-10">Gallery</h3>
+
+  <div class="grid md:grid-cols-3 gap-6">
+    <img src="./img/b1.jpg" class="rounded-xl hover:scale-105 transition">
+    <img src="./img/b2.jpg" class="rounded-xl hover:scale-105 transition">
+    <img src="./img/b3.jpg" class="rounded-xl hover:scale-105 transition">
   </div>
+
 </section>
 
-<!-- CAKES & MORE section -->
-<section id="cakeMenu" class="py-24 px-6 md:px-8 bg-[#FEF8F2]">
-  <div class="max-w-4xl mx-auto">
-    <div class="text-center mb-10">
-      <span class="text-[#C05E2E] text-sm font-bold tracking-[0.2em] uppercase">Also Available</span>
-      <h2 class="font-serif-alt text-4xl md:text-5xl font-bold text-stone-800">Cakes & More</h2>
-    </div>
-    <div class="bg-white rounded-2xl shadow-sm border border-[#F0E3D5] overflow-hidden">
-      <div class="overflow-x-auto">
-        <table class="w-full text-left cake-table-fresh">
-          <thead class="bg-[#FEF1E6]"><tr><th class="py-3 px-5 text-stone-700">#</th><th class="py-3 px-5 text-stone-700">By Type</th><th class="py-3 px-5 text-stone-700">By Flavour</th><th class="py-3 px-5 text-stone-700">By Occasion</th></tr></thead>
-          <tbody id="cakeBody"></tbody>
-        </table>
-      </div>
-    </div>
-  </div>
-</section>
+<!-- FOOTER -->
+<footer class="py-12 text-center border-t border-white/10">
 
-<!-- FOOTER - fresh minimal -->
-<footer id="footerpart" class="bg-stone-900 text-stone-300 pt-16 pb-6 px-6 md:px-8">
-  <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 border-b border-stone-700 pb-12">
-    <div class="text-center md:text-left">
-      <a href="https://www.instagram.com/fudgie.vivant/" target="_blank" class="inline-block"><img src="./img/fv-logo.jpg" class="w-20 h-20 rounded-full object-cover mx-auto md:mx-0 shadow-md mb-4 border-2 border-stone-600" alt="logo"></a>
-      <p class="text-stone-400 text-sm leading-relaxed">Handcrafted brownies baked with dark chocolate & lots of love.</p>
-      <a href="https://www.instagram.com/fudgie.vivant/" target="_blank" class="inline-flex items-center gap-2 text-[#F0BC8C] hover:text-[#FAD5B5] text-sm font-semibold mt-4 transition"><i class="fab fa-instagram"></i> @fudgie.vivant</a>
-    </div>
-    <div>
-      <h4 class="font-serif-alt text-white text-lg font-semibold mb-4">Quick Links</h4>
-      <ul class="space-y-2 text-sm">
-        <li><a href="#shop" class="hover:text-[#F0BC8C] transition">Brownie'z</a></li>
-        <li><a href="#menu" class="hover:text-[#F0BC8C] transition">Menu</a></li>
-        <li><a href="#browniepart" class="hover:text-[#F0BC8C] transition">Gallery</a></li>
-        <li><a href="./posts.html" class="hover:text-[#F0BC8C] transition">Instagram Posts</a></li>
-      </ul>
-    </div>
-    <div>
-      <h4 class="font-serif-alt text-white text-lg font-semibold mb-4">Contact Us</h4>
-      <ul class="space-y-2 text-sm text-stone-400">
-        <li>📞 16×5 Enquiry Support <span class="text-stone-500">(Sunday Holiday)</span></li>
-        <li>🌐 <a href="https://bit.ly/fudgieVivant" class="hover:text-[#F0BC8C]">www.fudgievivant.com</a></li>
-        <li>✉️ <a href="mailto:Contactus@fudgievivant.com" class="hover:text-[#F0BC8C]">Contactus@fudgievivant.com</a></li>
-        <li>🏢 Corporate: B2B@fudgievivant.com</li>
-      </ul>
-    </div>
-  </div>
-  <div class="text-center text-stone-500 text-xs pt-8">Fudgie Vivant ©️ 2024 — All rights reserved. Sweetness since day one.</div>
+  <p class="text-white/50 text-sm">
+    © 2024 Fudgie Vivant — Crafted with ❤️
+  </p>
+
+  <a href="https://instagram.com/fudgie.vivant" target="_blank"
+     class="block mt-3 text-pink-400">
+    @fudgie.vivant
+  </a>
+
 </footer>
 
-<script>
-// ========== DATA ==========
-const shopItems = [
-  { id: 'FVB001', name: 'Classic Brownie', price: '₹40 / piece · ₹220 / ¼ Kg', desc: 'The OG — rich, fudgy, timeless.', img: './brownie/brwnie.jpg', stockout: false },
-  { id: 'FVB002', name: 'Ultimate Choco', price: '₹120 / 2 pcs · ₹260 / ¼ Kg', desc: 'Double chocolate, double the joy.', img: './brownie/ultimate.jpg', stockout: false },
-  { id: 'FVB003', name: 'Oreo Brownie', price: '₹199 / 4 pcs', desc: 'Crunchy Oreo meets silky fudge.', img: './brownie/oreo.jpg', stockout: false },
-  { id: 'FVB004', name: 'Peanut Butter', price: '₹230 / 4 pcs', desc: 'Salty-sweet heaven.', img: './brownie/peanut.jpg', stockout: true },
-  { id: 'FVB005', name: 'Vivant Special', price: '₹350 / 4 pcs', desc: 'Our signature — the one & only.', img: './brownie/nuts.jpg', stockout: false, highlight: true },
-  { id: 'FVB006', name: 'HazelNut Brownie', price: '₹399 / ¼ Kg', desc: 'Toasted hazelnuts in every layer.', img: './brownie/hazelnut.jpg', stockout: false },
-  { id: 'FVB007', name: 'Coffee Brownie', price: '₹269 / 4 pcs', desc: 'Espresso-infused dark chocolate.', img: './brownie/coffee.jpg', stockout: true },
-  { id: 'FVB008', name: 'Brownie Bites', price: '₹130 / 150g', desc: 'Bite-sized perfection, great for gifting.', img: './brownie/bites.jpg', stockout: false },
-];
-
-const menuItems = [
-  { code: 'FVB001', name: 'Brownie', price: '₹40 (1 pc) / ₹220 (¼ Kg)', highlight: false, stockout: false },
-  { code: 'FVB002', name: 'Ultimate Choco Brownie', price: '₹120 (2 pcs) / ₹260 (¼ Kg)', highlight: false, stockout: false },
-  { code: 'FVB003', name: 'Oreo Brownie', price: '₹199 (4 pcs)', highlight: false, stockout: false },
-  { code: 'FVB004', name: 'Peanut Butter Brownie', price: '₹230 (4 pcs)', highlight: false, stockout: true },
-  { code: 'FVB005', name: 'Vivant Brownie (SPL)', price: '₹350 (4 pcs)', highlight: true, stockout: false },
-  { code: 'FVB006', name: 'HazelNut Brownie', price: '₹399 (¼ Kg)', highlight: false, stockout: false },
-  { code: 'FVB007', name: 'Coffee Brownie', price: '₹269 (4 pcs)', highlight: false, stockout: true },
-  { code: 'FVB008', name: 'Brownie Bites', price: '₹130 (150 Grms)', highlight: false, stockout: false },
-  { code: 'FVB009', name: '— To Be Added —', price: '—', highlight: false, stockout: false },
-  { code: 'FVB010', name: '— To Be Added —', price: '—', highlight: false, stockout: false },
-];
-
-const cakeItems = [
-  { type: 'Regular Cakes', flavour: 'Butterscotch', occasion: 'Birthday Cakes' },
-  { type: 'Brownie', flavour: 'More Variety*', occasion: 'Daily Treat' },
-  { type: 'Designer Cakes', flavour: 'Chocolate', occasion: 'Special Events' },
-];
-
-function renderShop() {
-  const grid = document.getElementById('shopGrid');
-  if (!grid) return;
-  grid.innerHTML = shopItems.map((item, idx) => `
-    <div class="product-card reveal bg-white rounded-2xl overflow-hidden shadow-md border border-[#F0E3D5] relative transition-all ${item.stockout ? 'opacity-60' : ''}">
-      ${item.stockout ? '<div class="absolute top-3 right-3 bg-stone-800 text-white text-[0.6rem] font-bold px-2.5 py-1 rounded-full z-10">Stock Out</div>' : ''}
-      <div class="h-52 overflow-hidden bg-[#FEF1E6]"><img class="w-full h-full object-cover transition duration-500 hover:scale-105" src="${item.img}" alt="${item.name}" onerror="this.style.background='#F0C9A8'"></div>
-      <div class="p-5">
-        <div class="text-[0.6rem] font-bold tracking-wider text-[#C05E2E] uppercase">${item.id}</div>
-        <div class="font-serif-alt text-xl font-bold text-stone-800">${item.name}</div>
-        <p class="text-stone-500 text-xs mt-1 leading-relaxed">${item.desc}<br><span class="font-semibold text-[#C05E2E] text-sm">${item.price}</span></p>
-        <a href="https://www.instagram.com/fudgie.vivant/" target="_blank" class="inline-flex items-center gap-2 mt-4 bg-stone-100 text-stone-700 hover:bg-[#C05E2E] hover:text-white px-4 py-2 rounded-full text-xs font-bold transition-all"><i class="fab fa-instagram"></i> DM to Order</a>
-      </div>
-    </div>
-  `).join('');
-  observeReveal();
-}
-
-function renderMenu() {
-  const tbody = document.getElementById('menuBody');
-  if (!tbody) return;
-  tbody.innerHTML = menuItems.map((item, i) => `
-    <tr class="${item.highlight ? 'bg-[#FEF6ED]' : ''} ${item.stockout ? 'opacity-50' : ''}">
-      <td class="py-3 px-4 text-stone-600">${i+1}</td>
-      <td class="py-3 px-4 font-mono text-xs text-[#C05E2E] font-bold">${item.code}</td>
-      <td class="py-3 px-4 text-stone-700">${item.name}${item.stockout ? ' <span class="text-stone-400 text-xs">(Out of stock)</span>' : ''}</td>
-      <td class="py-3 px-4 font-semibold text-stone-800">${item.price}</td>
-    </tr>
-  `).join('');
-}
-
-function renderCakes() {
-  const tbody = document.getElementById('cakeBody');
-  if (!tbody) return;
-  tbody.innerHTML = cakeItems.map((item, i) => `
-    <tr class="border-b border-[#F0E3D5] last:border-0"><td class="py-3 px-4 text-stone-600">${i+1}</td><td class="py-3 px-4 text-stone-700">${item.type}</td><td class="py-3 px-4 text-stone-700">${item.flavour}</td><td class="py-3 px-4 text-stone-700">${item.occasion}</td></tr>
-  `).join('');
-}
-
-function renderChips() {
-  const container = document.getElementById('chipsContainer');
-  if (!container) return;
-  for (let i = 0; i < 24; i++) {
-    const chip = document.createElement('div');
-    chip.className = 'chip-float';
-    const size = 6 + Math.random() * 15;
-    const bg = Math.random() > 0.6 ? '#E7B183' : '#D9945C';
-    chip.style.cssText = `width:${size}px;height:${size}px;left:${Math.random() * 100}%;top:${100 + Math.random() * 30}%;animation-duration:${5 + Math.random() * 10}s;animation-delay:${Math.random() * 7}s;background:${bg};border-radius:${Math.random() > 0.5 ? '50%' : '35% 65% 45% 55%'};opacity:0.5`;
-    container.appendChild(chip);
-  }
-}
-
-function observeReveal() {
-  const elements = document.querySelectorAll('.reveal:not(.observed)');
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
-  }, { threshold: 0.1, rootMargin: "0px 0px -20px 0px" });
-  elements.forEach(el => { el.classList.add('observed'); io.observe(el); });
-}
-
-function initNavScroll() {
-  const nav = document.getElementById('mainNav');
-  window.addEventListener('scroll', () => { if (nav) nav.classList.toggle('shadow-md', window.scrollY > 20); });
-}
-
-function setActiveLink() {
-  const links = document.querySelectorAll('.nav-link-fresh');
-  const current = window.location.pathname.split('/').pop() || 'index.html';
-  links.forEach(link => {
-    const href = link.getAttribute('href');
-    if (href && (href === current || (current === 'index.html' && href === './index.html'))) link.classList.add('active-nav');
-    else if (href === '#shop' && !current.includes('posts')) {}
-  });
-}
-
-(function firstLoadReload() {
-  if (window.localStorage) {
-    if (!localStorage.getItem('firstLoadFV')) {
-      localStorage.setItem('firstLoadFV', 'true');
-      window.location.reload();
-    } else localStorage.removeItem('firstLoadFV');
-  }
-})();
-
-document.addEventListener('DOMContentLoaded', () => {
-  renderShop(); renderMenu(); renderCakes(); renderChips(); initNavScroll(); setActiveLink(); observeReveal();
-  setTimeout(observeReveal, 200);
-  const carouselEl = document.querySelector('#heroCarousel');
-  if (carouselEl) new bootstrap.Carousel(carouselEl, { interval: 2300, ride: 'carousel' });
-});
-</script>
+<script src="index.js"></script>
 </body>
 </html>
