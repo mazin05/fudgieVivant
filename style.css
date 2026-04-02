@@ -1,83 +1,130 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>FUDGIE VIVANT</title>
+body {
+  margin: 0;
+  background: #1A0F0A;
+  color: #F8F5F0;
+  font-family: 'Poppins', sans-serif;
+}
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300&display=swap" rel="stylesheet">
+/* NAV */
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 25px 60px;
+  position: absolute;
+  width: 100%;
+  z-index: 10;
+}
 
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+.logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 26px;
+  letter-spacing: 3px;
+}
 
-<header>
-  <div class="logo">FUDGIE VIVANT</div>
-  <nav>
-    <a href="#">Collections</a>
-    <a href="#">Craft</a>
-    <a href="#">Story</a>
-    <a href="#">Contact</a>
-  </nav>
-</header>
+nav a {
+  margin-left: 30px;
+  text-decoration: none;
+  color: #F8F5F0;
+  font-size: 14px;
+}
 
-<!-- HERO -->
-<section class="hero">
-  <div class="overlay"></div>
-  <div class="hero-content">
-    <h1>Luxury in Every Bite</h1>
-    <p>Artisan Fudge & Gourmet Brownies</p>
-    <button class="gold-btn">Explore Collection</button>
-  </div>
-</section>
+/* HERO */
+.hero {
+  height: 100vh;
+  background: url('img/b1.jpg') center/cover no-repeat;
+  position: relative;
+}
 
-<!-- SIGNATURE -->
-<section class="signature">
-  <h2>Signature Creations</h2>
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.4), #1A0F0A);
+}
 
-  <div class="lux-grid">
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translateY(-50%);
+}
 
-    <div class="lux-card">
-      <img src="img/brownie/ultimate.jpg">
-      <div class="info">
-        <h3>Ultimate Fudge</h3>
-        <span>Rich • Decadent • Iconic</span>
-      </div>
-    </div>
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 70px;
+}
 
-    <div class="lux-card">
-      <img src="img/brownie/hazelnut.jpg">
-      <div class="info">
-        <h3>Hazelnut Noir</h3>
-        <span>Roasted • Smooth • Elegant</span>
-      </div>
-    </div>
+.gold-btn {
+  margin-top: 20px;
+  padding: 12px 30px;
+  border: 1px solid #C6A46C;
+  background: transparent;
+  color: #C6A46C;
+  cursor: pointer;
+  transition: 0.4s;
+}
 
-    <div class="lux-card">
-      <img src="img/brownie/coffee.jpg">
-      <div class="info">
-        <h3>Espresso Velvet</h3>
-        <span>Bold • Aromatic • Refined</span>
-      </div>
-    </div>
+.gold-btn:hover {
+  background: #C6A46C;
+  color: black;
+}
 
-  </div>
-</section>
+/* SIGNATURE */
+.signature {
+  padding: 100px 60px;
+}
 
-<!-- EXPERIENCE -->
-<section class="experience">
-  <div class="text">
-    <h2>A Sensory Experience</h2>
-    <p>
-      Every creation at FUDGIE VIVANT is a masterpiece of flavor, texture, and luxury.
-      Designed for those who appreciate indulgence without compromise.
-    </p>
-  </div>
-</section>
+.signature h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 40px;
+}
 
-<footer>
-  <p>© 2026 FUDGIE VIVANT</p>
-</footer>
+.lux-grid {
+  display: flex;
+  gap: 30px;
+  margin-top: 50px;
+}
 
-</body>
-</html>
+.lux-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.lux-card img {
+  width: 300px;
+  height: 400px;
+  object-fit: cover;
+  transition: 0.5s;
+}
+
+.lux-card:hover img {
+  transform: scale(1.1);
+}
+
+.info {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+}
+
+.info h3 {
+  font-family: 'Playfair Display', serif;
+}
+
+/* EXPERIENCE */
+.experience {
+  padding: 120px 60px;
+  background: #2A1A12;
+}
+
+.experience h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 42px;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 30px;
+  font-size: 12px;
+}
