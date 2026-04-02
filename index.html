@@ -6,121 +6,137 @@
 
 <title>Fudgie Vivant</title>
 
-<!-- Tailwind v4 CDN -->
 <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
-<!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700;900&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
   body { font-family: 'Inter', sans-serif; }
-  .font-display { font-family: 'Playfair Display', serif; }
+  .luxury { font-family: 'Playfair Display', serif; }
 </style>
+
 </head>
 
-<body class="bg-[#0f0f0f] text-white">
+<body class="bg-[#0B0B0B] text-white overflow-x-hidden">
 
 <!-- NAV -->
-<header class="fixed w-full z-50 backdrop-blur bg-black/40 border-b border-white/10">
-  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-    
-    <h1 class="font-display text-2xl tracking-wide">
-      Fudgie <span class="text-pink-400">Vivant</span>
+<header class="fixed top-0 w-full z-50 backdrop-blur-xl bg-black/40 border-b border-white/5">
+  <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+
+    <h1 class="luxury text-2xl tracking-widest">
+      FUDGIE <span class="text-[#D4AF37]">VIVANT</span>
     </h1>
 
-    <nav class="hidden md:flex gap-8 text-sm text-white/70">
-      <a href="#shop" class="hover:text-white">Shop</a>
-      <a href="#menu" class="hover:text-white">Menu</a>
-      <a href="#gallery" class="hover:text-white">Gallery</a>
+    <nav class="hidden md:flex gap-10 text-sm text-white/60 tracking-widest">
+      <a href="#shop" class="hover:text-white transition">SHOP</a>
+      <a href="#menu" class="hover:text-white transition">MENU</a>
+      <a href="#gallery" class="hover:text-white transition">GALLERY</a>
     </nav>
 
   </div>
 </header>
 
 <!-- HERO -->
-<section class="min-h-screen flex items-center justify-center text-center px-6">
+<section class="h-screen flex items-center justify-center text-center px-6 relative">
 
-  <div class="max-w-3xl">
-    <h2 class="font-display text-5xl md:text-7xl leading-tight">
-      Artisan <br>
-      <span class="text-pink-400">Brownies</span>
+  <!-- Glow -->
+  <div class="absolute w-[500px] h-[500px] bg-[#D4AF37]/10 blur-[120px] rounded-full"></div>
+
+  <div class="relative z-10 max-w-4xl">
+
+    <h2 class="luxury text-6xl md:text-8xl leading-tight tracking-wide">
+      Indulge in <br>
+      <span class="text-[#D4AF37]">Luxury</span>
     </h2>
 
-    <p class="mt-6 text-white/60 text-lg">
-      Handmade with premium chocolate & love — every bite melts.
+    <p class="mt-6 text-white/50 max-w-xl mx-auto text-lg leading-relaxed">
+      Handcrafted brownies curated with premium ingredients —
+      designed for those who crave elegance in every bite.
     </p>
 
-    <div class="mt-8 flex justify-center gap-4">
-      <a href="#shop" class="px-6 py-3 bg-pink-500 rounded-full hover:scale-105 transition">
-        Order Now
+    <div class="mt-10 flex justify-center gap-6">
+      <a href="#shop" class="px-8 py-3 bg-[#D4AF37] text-black rounded-full hover:scale-105 transition">
+        Explore
       </a>
-      <a href="#menu" class="px-6 py-3 border border-white/20 rounded-full hover:bg-white/10 transition">
+      <a href="#menu" class="px-8 py-3 border border-white/20 rounded-full hover:bg-white/10 transition">
         View Menu
       </a>
     </div>
-  </div>
 
+  </div>
 </section>
 
 <!-- SHOP -->
-<section id="shop" class="py-20 px-6 max-w-7xl mx-auto">
+<section id="shop" class="py-28 px-6 max-w-7xl mx-auto">
 
-  <h3 class="text-3xl font-display mb-12 text-center">
-    Our Brownies
+  <h3 class="luxury text-4xl text-center mb-16 tracking-wide">
+    Signature Collection
   </h3>
 
-  <div id="shopGrid" class="grid md:grid-cols-3 gap-8"></div>
+  <div id="shopGrid" class="grid md:grid-cols-3 gap-10"></div>
 
 </section>
 
 <!-- MENU -->
-<section id="menu" class="py-20 px-6 bg-[#141414]">
+<section id="menu" class="py-28 px-6 bg-[#0f0f0f]">
 
   <div class="max-w-4xl mx-auto">
-    <h3 class="text-3xl font-display text-center mb-10">Menu</h3>
 
-    <table class="w-full text-left text-sm">
-      <thead class="text-white/60 border-b border-white/10">
+    <h3 class="luxury text-4xl text-center mb-16">Menu</h3>
+
+    <table class="w-full text-left border-collapse">
+
+      <thead class="text-white/40 text-xs tracking-widest border-b border-white/10">
         <tr>
-          <th class="py-3">Code</th>
-          <th>Name</th>
-          <th>Price</th>
+          <th class="py-4">CODE</th>
+          <th>ITEM</th>
+          <th>PRICE</th>
         </tr>
       </thead>
 
       <tbody id="menuBody"></tbody>
+
     </table>
+
   </div>
 
 </section>
 
 <!-- GALLERY -->
-<section id="gallery" class="py-20 px-6 max-w-7xl mx-auto">
+<section id="gallery" class="py-28 px-6 max-w-7xl mx-auto">
 
-  <h3 class="text-3xl font-display text-center mb-10">Gallery</h3>
+  <h3 class="luxury text-4xl text-center mb-16">Experience</h3>
 
   <div class="grid md:grid-cols-3 gap-6">
-    <img src="./img/b1.jpg" class="rounded-xl hover:scale-105 transition">
-    <img src="./img/b2.jpg" class="rounded-xl hover:scale-105 transition">
-    <img src="./img/b3.jpg" class="rounded-xl hover:scale-105 transition">
+
+    <img src="./img/b1.jpg" class="rounded-2xl hover:scale-105 transition duration-500">
+    <img src="./img/b2.jpg" class="rounded-2xl hover:scale-105 transition duration-500">
+    <img src="./img/b3.jpg" class="rounded-2xl hover:scale-105 transition duration-500">
+
   </div>
 
 </section>
 
 <!-- FOOTER -->
-<footer class="py-12 text-center border-t border-white/10">
+<footer class="py-16 text-center border-t border-white/10">
 
-  <p class="text-white/50 text-sm">
-    © 2024 Fudgie Vivant — Crafted with ❤️
+  <h4 class="luxury text-xl tracking-widest text-[#D4AF37]">
+    FUDGIE VIVANT
+  </h4>
+
+  <p class="text-white/40 mt-4 text-sm">
+    Crafted for refined taste.
   </p>
 
-  <a href="https://instagram.com/fudgie.vivant" target="_blank"
-     class="block mt-3 text-pink-400">
-    @fudgie.vivant
+  <a href="https://instagram.com/fudgie.vivant"
+     target="_blank"
+     class="block mt-6 text-[#D4AF37] tracking-wide">
+    Instagram →
   </a>
 
 </footer>
 
 <script src="index.js"></script>
+
 </body>
 </html>
